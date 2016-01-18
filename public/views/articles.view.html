@@ -1,12 +1,12 @@
 <h3 class="heading">Latest Articles</h3>
 <div ng-controller="ArticlesCtrl">
   <div class="row">
-    <a href="#/categories" class="link">Go Back</a>
+    <a href="/categories" class="link">Go Back</a>
     <div class="articles" ng-repeat="article in articles">
       <div class="col-md-12 article">
         <h4>{{article.title}}</h4>
         <p>{{article.body | limitTo:250}}</p>
-        <a class="btn btn-default" href="#/article/{{article._id}}">Read Article</a>
+        <a class="btn btn-default" href="/article/{{article._id}}">Read Article</a>
       </div>
     </div>
     <div ng-if="articles==false">

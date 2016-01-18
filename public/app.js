@@ -1,5 +1,6 @@
 var app = angular.module('kBApp',['ngRoute']);
-app.config(['$routeProvider', function($routeProvider){
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+  $locationProvider.html5Mode(true);
   $routeProvider.
     when('/categories',{
       templateUrl: 'views/categories.view.html',
@@ -26,4 +27,5 @@ app.config(['$routeProvider', function($routeProvider){
       controller: 'ArticleEditCtrl'
     }).
     otherwise({redirectTo: '/categories'})
+
 }]);
